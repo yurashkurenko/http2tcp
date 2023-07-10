@@ -14,7 +14,7 @@ def json_example():
 
 @app.route("/get", methods=['GET'])
 def json_get():
-    jsondata='{"payload-out":"Какая-то исходящая информация"}'
+    jsondata='{"payload-out":"Какая-то исходящая информация от сервера к клиенту"}'
     json_object = json.loads(jsondata)  
     payloadout=json_object["payload-out"]
     print(payloadout)
@@ -23,4 +23,4 @@ def json_get():
 
 	
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5005)
