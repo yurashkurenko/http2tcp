@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 
 @app.route("/post", methods=['POST'])
-def json_example():
+def json_post():
     request_data = request.get_json()
     payload1=request_data['payload']
     print(payload1)
